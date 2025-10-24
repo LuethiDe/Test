@@ -1,42 +1,81 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.app {
+  display: grid;
+  min-height: 100vh; /* full page, vh = viewport heigth */
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+
+header {
+  grid-column: 1 / -1; /*Definiert von wo bis wo die Zelle im Grid geht*/
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 40px;
+  background: #d6ccc2;
+}
+footer {
+  grid-column: 1 / -1;
+  background: #d6ccc2;
+}
+aside {
+  background: lightgray;
+}
+main {
+  background: white;
+}
+
+#img {
+  background-image: url("https://media1.giphy.com/media/v1.Y2lkPTZjMDliOTUyNnJjdjEyZDljd2twZXE3M2FvMmpiOHNpZHJqeGN1d2FiZHVvdTM5aCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/nFhsiI61KTgExVrRyB/200.gif");
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  background-position: center;
+  margin-top: 5px;
+  margin-left: 15px;
+  margin-right: 5px;
+}
+
+#img2 {
+  background-image: url("https://i.chzbgr.com/full/6450337792/h5651C28D/glorious-harp-music");
+  width: 304px;
+  height: 216px;
+}
+
+.button {
+  border-radius: 12px;
+  border: 1px solid #e16319;
+  margin-top: 7.5px;
+  margin-right: 10px;
+  background-color: #e16319;
+  color: white;
+  font-family: Andale Mono;
+  font-size: 12px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.button1:hover {
+  background-color: #a14917;
+  border: 1px solid #a14917;
+}
+
+#main {
+  font-family: Andale Mono;
+  font-weight: bolder;
+  font-size: 35px;
+  width: 110px;
+  margin-left: 5px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.h1 {
+  font-family: Andale Mono;
+  font-weight: bolder;
+  font-size: 14px;
 }
